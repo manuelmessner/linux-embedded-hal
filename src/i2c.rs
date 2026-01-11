@@ -11,6 +11,7 @@ use embedded_hal::i2c::NoAcknowledgeSource;
 /// Newtype around [`i2cdev::linux::LinuxI2CDevice`] that implements the `embedded-hal` traits
 ///
 /// [`i2cdev::linux::LinuxI2CDevice`]: https://docs.rs/i2cdev/0.5.0/i2cdev/linux/struct.LinuxI2CDevice.html
+#[derive(Debug)]
 pub struct I2cdev {
     inner: i2cdev::linux::LinuxI2CDevice,
     path: PathBuf,
